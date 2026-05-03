@@ -1,8 +1,12 @@
 import React from "react";
 import Container from "../components/layout/Container";
 
-const Home = () => {
-  return <Container></Container>;
+const HomePage = () => {
+  return (
+    <Container hasBg={true}>
+      <div className="pt-10"></div>
+    </Container>
+  );
 };
 
-export default Home;
+export default HomePage;

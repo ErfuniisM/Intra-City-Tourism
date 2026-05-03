@@ -1,11 +1,24 @@
 import Header from "./header";
-const Container = ({ children }) => {
+
+const Container = ({ children, hasBg, trip }) => {
   return (
-    <div className="w-full h-screen flex overflow-hidden bg-gray-50">
-      <div className="flex flex-col flex-1 overflow-hidden">
+    <div>
+      {hasBg && (
+        <div
+          className="fixed top-0 left-0 w-full h-full z-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/5.png')" }}
+        ></div>
+      )}
+
+      <div className="relative z-10">
         <Header />
-        <main className="flex-1 overflow-y-auto p-3 sm:p-4 md:p-5 lg:p-6">
-          {children}
+      </div>
+
+      <div className={`relative z-10 ${hasBg ? "pt-[100vh]" : "pt-24"}`}>
+        <main className="bg-white min-h-screen">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            {children}
+          </div>
         </main>
       </div>
     </div>
