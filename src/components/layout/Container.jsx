@@ -3,7 +3,7 @@ import Header from "./header";
 const Container = ({ children, hasBg, trip }) => {
   return (
     <div>
-      {/* ---- */}
+      {/* Requirement to have a background on pages */}
       {hasBg && (
         <div
           className="fixed top-0 left-0 w-full h-full z-0 bg-cover bg-center bg-no-repeat"
